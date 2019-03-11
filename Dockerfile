@@ -2,7 +2,7 @@ FROM node:10.15-alpine
 
 RUN apk add --update \
   --repository http://dl-3.alpinelinux.org/alpine/edge/testing \
-  vips-tools \
+  vips-tools build-base git python2 \
   && rm -rf /var/cache/apk/*
 
 RUN npm install -g gatsby-cli node-gyp sharp
