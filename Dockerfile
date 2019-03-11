@@ -5,7 +5,7 @@ RUN apk add --update \
   vips-tools build-base git python2 \
   && rm -rf /var/cache/apk/*
 
-RUN npm install -g gatsby-cli node-gyp sharp
+RUN npm install --unsafe-perm -g gatsby-cli node-gyp sharp
 
 USER node
 RUN mkdir /home/node/app
