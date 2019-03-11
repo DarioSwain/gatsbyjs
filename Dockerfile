@@ -7,6 +7,5 @@ RUN apk add --update \
 
 RUN npm install --unsafe-perm -g gatsby-cli node-gyp sharp
 
-USER node
 RUN mkdir /home/node/app
 WORKDIR /home/node/app
