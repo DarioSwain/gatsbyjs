@@ -5,5 +5,8 @@ RUN apk add --update \
   vips-tools \
   && rm -rf /var/cache/apk/*
 
-RUN npm install -g gatsby-cli node-gyp
-WORKDIR /app
+RUN npm install -g gatsby-cli node-gyp sharp
+
+USER node
+RUN mkdir /home/node/app
+WORKDIR /home/node/app
